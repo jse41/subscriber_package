@@ -28,6 +28,7 @@
 // %Tag(FULLTEXT)%
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "publisher_package/topic_name.h"
 
 /**
  * This tutorial demonstrates simple receipt of messages over the ROS system.
@@ -76,7 +77,7 @@ int main(int argc, char **argv)
    * away the oldest ones.
    */
 // %Tag(SUBSCRIBER)%
-  ros::Subscriber sub = n.subscribe("publisher_topic", 1000, chatterCallback);
+  ros::Subscriber sub = n.subscribe("topic_name", 1000, chatterCallback);
 // %EndTag(SUBSCRIBER)%
 
   /**
